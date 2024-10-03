@@ -10,7 +10,7 @@ namespace DataAccess
 {
     public class Funciones
     {
-        Base b = new Base("localhost", "root", "", "db_Usuarios_Software_Sensores");
+        Base b = new Base("localhost", "root", "", "automotrizdb");
 
         public string Guardar(string q)
         {
