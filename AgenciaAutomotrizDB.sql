@@ -179,3 +179,36 @@ BEGIN
     DELETE FROM Taller
     WHERE codigoHerramienta = _codigoHerramienta;
 END;
+
+DROP procedure if exists p_Validar; 
+create procedure p_Validar
+(
+	in _user INT,
+	in _pass varchar(255)
+)
+begin 
+
+	DECLARE x INT;
+	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
+	if x > 0 then
+		SELECT 'Correcto' AS rs, (SELECT permiso FROM Permisos WHERE fk_idUsuario = _user) AS Permisos;
+	ELSE
+		SELECT 'Error' AS rs, "" AS Nivel;
+	END if;
+END;
+
+CREATE TABLE Permisos(
+    fk_idUsuario INT,
+    FOREIGN KEY(fk_idUsuario) REFERENCES Usuarios(idUsuarios),
+    permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
+);
+
+CREATE TABLE Usuarios(
+    idUsuarios INT PRIMARY KEY,
+    password VARCHAR(255),
+    nombre VARCHAR(255),
+    apellidoP VARCHAR(255),
+    apellidoM VARCHAR(255),
+    fechanacimiento DATE,
+    rfc VARCHAR(20) UNIQUE
+);
