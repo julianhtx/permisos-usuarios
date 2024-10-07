@@ -12,13 +12,14 @@ namespace Controller
     public class ControllerLogin
     {
         Funciones f = new Funciones();
-        public string[] Validar(string _nick, string _clave)
+
+        public string[] Validar(string _user, string _pass)
         {
             string[] resultado = new string[2];
-            DataSet r = f.Mostrar($"call validar('{_nick}', '{Sha1(_clave)}')", "usuarios");
+            DataSet r = f.Mostrar($"call p_validar('{_user}', '{Sha1(_pass)}')", "usuarios");
             DataTable dt = r.Tables[0];
             resultado[0] = dt.Rows[0]["rs"].ToString();
-            resultado[1] = dt.Rows[0]["rol"].ToString();
+            resultado[1] = dt.Rows[0]["Permisos"].ToString();
             return resultado;
         }
 

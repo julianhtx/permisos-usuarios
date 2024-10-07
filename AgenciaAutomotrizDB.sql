@@ -32,12 +32,6 @@ CREATE TABLE Permisos(
     permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
 );
 
-ALTER TABLE Permisos
-ADD nombre_User VARCHAR(255);
-
-ALTER TABLE Permisos
-ADD password VARCHAR(255);
-
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
@@ -179,3 +173,33 @@ BEGIN
     DELETE FROM Taller
     WHERE codigoHerramienta = _codigoHerramienta;
 END;
+
+/*creacion procedure de validar usuario*/
+DROP procedure if exists p_validar; 
+create procedure p_validar
+(
+	in _user INT,
+	in _pass varchar(255)
+)
+begin 
+	DECLARE x INT;
+	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
+	if x > 0 then
+		SELECT 'Correcto' AS rs, (SELECT Permiso FROM permisos WHERE fk_idUsuario = _user) AS Permisos;
+	ELSE
+		SELECT 'Error' AS rs, 0 AS Nivel;
+	END if;
+END;
+
+describe Permisos;
+
+call p_InsertarUsuarios (1 ,
+    sha('1234'),
+    'xXpepin',
+    'gameplais',
+    'Xx',
+    '2024-09-09',
+    'JHTM090507HJC');
+SELECT * FROM usuarios;
+
+call p_validar(1, sha1('1234'));
