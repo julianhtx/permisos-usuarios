@@ -30,7 +30,7 @@ CREATE TABLE Permisos(
     fk_idUsuario INT,
     FOREIGN KEY(fk_idUsuario) REFERENCES Usuarios(idUsuarios),
     permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
-)
+);
 
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
