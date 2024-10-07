@@ -32,6 +32,12 @@ CREATE TABLE Permisos(
     permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
 );
 
+ALTER TABLE Permisos
+ADD nombre_User VARCHAR(255);
+
+ALTER TABLE Permisos
+ADD password VARCHAR(255);
+
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
