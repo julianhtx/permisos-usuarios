@@ -32,6 +32,9 @@ CREATE TABLE Permisos(
     permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
 );
 
+ALTER TABLE permisos
+MODIFY COLUMN permiso VARCHAR(255);
+
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
@@ -172,6 +175,49 @@ CREATE PROCEDURE p_EliminarTaller(
 BEGIN
     DELETE FROM Taller
     WHERE codigoHerramienta = _codigoHerramienta;
+END;
+
+--* CRUD DE PERMISOS
+--! CREAR E INSERTAR
+DROP PROCEDURE IF EXISTS p_InsertarPermisos;
+CREATE PROCEDURE p_InsertarPermisos(
+    IN _fk_idUsuario INT,
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    INSERT INTO Permisos (fk_idUsuario, permiso) VALUES (
+        _fk_idUsuario, _permiso
+    );
+END;
+
+--! LEER DATO (INSERT)
+DROP PROCEDURE IF EXISTS p_ObtenerPermisos;
+CREATE PROCEDURE p_ObtenerPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    SELECT * FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! MODIFICAR
+DROP PROCEDURE IF EXISTS p_ActualizarPermisos;
+CREATE PROCEDURE p_ActualizarPermisos(
+    IN _fk_idUsuario INT,
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    UPDATE Permisos SET
+        permiso = _permiso
+    WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! BORRAR
+DROP PROCEDURE IF EXISTS p_BorrarPermisos;
+CREATE PROCEDURE p_BorrarPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    DELETE FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
 END;
 
 /*creacion procedure de validar usuario*/
