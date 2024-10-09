@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\juli\u00E1n\\downloads\\permisos-usuarios\\solucionpermisosusuario\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -28,6 +29,13 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\juli\u00E1n\\downloads\\permisos-usuarios\\solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\juli\u00E1n\\downloads\\permisos-usuarios\\solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> main
       "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -62,12 +70,21 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "FrmAddUsuario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\SolucionPermisosUsuario\\FrmAddUsuario.cs",
               "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmAddUsuario.cs",
               "ToolTip": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\SolucionPermisosUsuario\\FrmAddUsuario.cs [Dise\u00F1o]",
               "RelativeToolTip": "SolucionPermisosUsuario\\FrmAddUsuario.cs [Dise\u00F1o]",
+=======
+              "DocumentIndex": 0,
+              "Title": "FrmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\SolucionPermisosUsuario\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmLogin.cs",
+              "ToolTip": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\SolucionPermisosUsuario\\FrmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SolucionPermisosUsuario\\FrmLogin.cs [Dise\u00F1o]",
+>>>>>>> main
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T02:10:35.853Z",
               "EditorCaption": " [Dise\u00F1o]"
@@ -142,6 +159,7 @@
               "RelativeToolTip": "SolucionPermisosUsuario\\FrmLogin.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-10-04T00:08:14.86Z",
               "EditorCaption": ""
             },
@@ -207,6 +225,9 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T00:08:40.948Z",
               "EditorCaption": " [Dise\u00F1o]"
+=======
+              "WhenOpened": "2024-10-04T00:08:14.86Z"
+>>>>>>> main
             }
           ]
         }
