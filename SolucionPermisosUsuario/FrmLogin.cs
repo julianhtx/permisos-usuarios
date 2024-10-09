@@ -33,7 +33,8 @@ namespace SolucionPermisosUsuario
                 this.Hide();
                 int nivelUsuario = int.Parse(r[1]);
 
-                FrmPrincipal principal = new FrmPrincipal(permisosUsuario);
+                FrmPrincipal principal = new FrmPrincipal(//permisosUsuario
+                                                          );
                 principal.Show();
             }
             else
