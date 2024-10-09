@@ -11,6 +11,9 @@ CREATE TABLE Usuarios(
     rfc VARCHAR(20) UNIQUE
 );
 
+ALTER TABLE Usuarios 
+CHANGE COLUMN idUsuarios Username VARCHAR(255);
+
 CREATE TABLE Refacciones(
     CodigoBarras INT PRIMARY KEY,
     nombre VARCHAR(255),
@@ -27,34 +30,35 @@ CREATE TABLE Taller(
 );
 
 CREATE TABLE Permisos(
-    fk_idUsuario INT,
-    FOREIGN KEY(fk_idUsuario) REFERENCES Usuarios(idUsuarios),
-    permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
+    fk_Username varchar(255),
+    nombre_form varchar(255),
+    permisos varchar(255),
+    FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
-
-ALTER TABLE Permisos
-ADD nombre_User VARCHAR(255);
-
-ALTER TABLE Permisos
-ADD password VARCHAR(255);
-
+describe permisos;
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
-CREATE PROCEDURE p_InsertarUsuarios(
-    IN _idUsuarios INT,
-    IN _password VARCHAR(255),
-    IN _nombre VARCHAR(255),
-    IN _apellidoP VARCHAR(255),
-    IN _apellidoM VARCHAR(255),
-    IN _fechanacimiento DATE,
-    IN _rfc VARCHAR(20)
+CREATE procedure p_insertar_usuarios
+(
+    in _username varchar(255),
+    in _password varchar(255),
+    in _nombre varchar(255),
+    in _apellidoP varchar(255), 
+    in _apellidoM DATE,
+    in _fecha_Nacimiento VARCHAR(13),
+    in _rfc varchar(20),
+    in _nombre_form varchar(255),
+    in _permisos varchar(255)
 )
-BEGIN
-    INSERT INTO Usuarios ( idUsuarios, password, nombre, apellidoP, apellidoM, fechanacimiento, rfc ) VALUES(
-         _idUsuarios, _password, _nombre, _apellidoP, _apellidoM, _fechanacimiento, _rfc
-    );
-END;
+begin 
+    declare nuevo_usuario int; 
+    insert into usuarios (username, password, nombre, apellidop, apellidom, fecha_nacimiento, rfc) values 
+    (_username, _password, _nombre, _apellidop, _apellidom, _fecha_nacimiento, _rfc);
+    set nuevo_usuario = last_insert_id(); 
+    insert into permisos(fk_username, nombre_form, permisos) values 
+    (nuevo_usuario, _nombre_form, _permisos); 
+end;
 
 --! MODIFICAR
 DROP PROCEDURE IF EXISTS p_ModificarUsuarios;
