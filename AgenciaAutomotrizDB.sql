@@ -55,10 +55,10 @@ CREATE procedure p_insertar_usuarios
     in _permisos varchar(255)
 )
 begin 
-    declare nuevo_usuario int; 
+    declare nuevo_usuario varchar(255); 
     insert into usuarios (username, password, nombre, apellidop, apellidom, fecha_nacimiento, rfc) values 
     (_username, _password, _nombre, _apellidop, _apellidom, _fecha_nacimiento, _rfc);
-    set nuevo_usuario = last_insert_id(); 
+    set nuevo_usuario = _username; 
     insert into permisos(fk_username, nombre_form, permisos) values 
     (nuevo_usuario, _nombre_form, _permisos); 
 end;
@@ -90,11 +90,11 @@ END;
 --! ELIMINAR
 DROP PROCEDURE IF EXISTS p_EliminarUsuarios;
 CREATE PROCEDURE p_EliminarUsuarios(
-    IN _idUsuarios INT
+    IN _username INT
 )
 BEGIN
     DELETE FROM Usuarios
-    WHERE idUsuarios = _idUsuarios;
+    WHERE username = _username;
 END;
 
 --*CRUD DE REFACCIONES
@@ -189,9 +189,14 @@ END;
 
 --* CRUD DE PERMISOS
 --! CREAR E INSERTAR
+
+
+--! ARREGLAR SI O SI
+
 DROP PROCEDURE IF EXISTS p_InsertarPermisos;
 CREATE PROCEDURE p_InsertarPermisos(
-    IN _fk_idUsuario INT,
+    IN _fk_username VARCHAR(255),
+    IN _nombre_form VARCHAR(255),
     IN _permiso VARCHAR(255)
 )
 BEGIN
@@ -199,7 +204,7 @@ BEGIN
         _fk_idUsuario, _permiso
     );
 END;
-
+DESCRIBE PERMISOS
 --! LEER DATO (INSERT)
 DROP PROCEDURE IF EXISTS p_ObtenerPermisos;
 CREATE PROCEDURE p_ObtenerPermisos(
