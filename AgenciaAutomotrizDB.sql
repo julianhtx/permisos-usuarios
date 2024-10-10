@@ -10,7 +10,7 @@ CREATE TABLE Usuarios(
     fechanacimiento DATE,
     rfc VARCHAR(20) UNIQUE
 );
-
+describe usuarios
 ALTER TABLE Usuarios 
 CHANGE COLUMN idUsuarios Username VARCHAR(255);
 
@@ -52,8 +52,8 @@ CREATE procedure p_insertar_usuarios
     in _password varchar(255),
     in _nombre varchar(255),
     in _apellidoP varchar(255), 
-    in _apellidoM DATE,
-    in _fecha_Nacimiento VARCHAR(13),
+    in _apellidoM varchar(255),
+    in _fecha_Nacimiento DATE,
     in _rfc varchar(20),
     in _nombre_form varchar(255),
     in _permisos varchar(255)
@@ -70,7 +70,7 @@ end;
 --! MODIFICAR
 DROP PROCEDURE IF EXISTS p_ModificarUsuarios;
 CREATE PROCEDURE p_ModificarUsuarios(
-    IN _idUsuarios INT,
+    IN _Username varchar(255),
     IN _password VARCHAR(255),
     IN _nombre VARCHAR(255),
     IN _apellidoP VARCHAR(255),
@@ -88,7 +88,7 @@ BEGIN
         fechanacimiento = _fechanacimiento,
         rfc = _rfc
     WHERE
-        idUsuarios = _idUsuarios;
+        username = _username;
 END;
 
 --! ELIMINAR
@@ -191,10 +191,6 @@ BEGIN
     WHERE codigoHerramienta = _codigoHerramienta;
 END;
 
-<<<<<<< HEAD
-DROP procedure if exists p_Validar; 
-create procedure p_Validar
-=======
 --* CRUD DE PERMISOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarPermisos;
@@ -241,13 +237,11 @@ END;
 /*creacion procedure de validar usuario*/
 DROP procedure if exists p_validar; 
 create procedure p_validar
->>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
 (
 	in _user INT,
 	in _pass varchar(255)
 )
 begin 
-<<<<<<< HEAD
 
 	DECLARE x INT;
 	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
@@ -273,26 +267,3 @@ CREATE TABLE Usuarios(
     fechanacimiento DATE,
     rfc VARCHAR(20) UNIQUE
 );
-=======
-	DECLARE x INT;
-	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
-	if x > 0 then
-		SELECT 'Correcto' AS rs, (SELECT Permiso FROM permisos WHERE fk_idUsuario = _user) AS Permisos;
-	ELSE
-		SELECT 'Error' AS rs, 0 AS Nivel;
-	END if;
-END;
-
-describe Permisos;
-
-call p_InsertarUsuarios (1 ,
-    sha('1234'),
-    'xXpepin',
-    'gameplais',
-    'Xx',
-    '2024-09-09',
-    'JHTM090507HJC');
-SELECT * FROM usuarios;
-
-call p_validar(1, sha1('1234'));
->>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
