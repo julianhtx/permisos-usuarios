@@ -35,7 +35,14 @@ CREATE TABLE Permisos(
     permisos varchar(255),
     FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
+<<<<<<< HEAD
 describe permisos;
+=======
+
+ALTER TABLE permisos
+MODIFY COLUMN permiso VARCHAR(255);
+
+>>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
@@ -184,13 +191,63 @@ BEGIN
     WHERE codigoHerramienta = _codigoHerramienta;
 END;
 
+<<<<<<< HEAD
 DROP procedure if exists p_Validar; 
 create procedure p_Validar
+=======
+--* CRUD DE PERMISOS
+--! CREAR E INSERTAR
+DROP PROCEDURE IF EXISTS p_InsertarPermisos;
+CREATE PROCEDURE p_InsertarPermisos(
+    IN _fk_idUsuario INT,
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    INSERT INTO Permisos (fk_idUsuario, permiso) VALUES (
+        _fk_idUsuario, _permiso
+    );
+END;
+
+--! LEER DATO (INSERT)
+DROP PROCEDURE IF EXISTS p_ObtenerPermisos;
+CREATE PROCEDURE p_ObtenerPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    SELECT * FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! MODIFICAR
+DROP PROCEDURE IF EXISTS p_ActualizarPermisos;
+CREATE PROCEDURE p_ActualizarPermisos(
+    IN _fk_idUsuario INT,
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    UPDATE Permisos SET
+        permiso = _permiso
+    WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! BORRAR
+DROP PROCEDURE IF EXISTS p_BorrarPermisos;
+CREATE PROCEDURE p_BorrarPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    DELETE FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+/*creacion procedure de validar usuario*/
+DROP procedure if exists p_validar; 
+create procedure p_validar
+>>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
 (
 	in _user INT,
 	in _pass varchar(255)
 )
 begin 
+<<<<<<< HEAD
 
 	DECLARE x INT;
 	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
@@ -216,3 +273,26 @@ CREATE TABLE Usuarios(
     fechanacimiento DATE,
     rfc VARCHAR(20) UNIQUE
 );
+=======
+	DECLARE x INT;
+	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
+	if x > 0 then
+		SELECT 'Correcto' AS rs, (SELECT Permiso FROM permisos WHERE fk_idUsuario = _user) AS Permisos;
+	ELSE
+		SELECT 'Error' AS rs, 0 AS Nivel;
+	END if;
+END;
+
+describe Permisos;
+
+call p_InsertarUsuarios (1 ,
+    sha('1234'),
+    'xXpepin',
+    'gameplais',
+    'Xx',
+    '2024-09-09',
+    'JHTM090507HJC');
+SELECT * FROM usuarios;
+
+call p_validar(1, sha1('1234'));
+>>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
