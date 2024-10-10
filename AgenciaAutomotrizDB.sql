@@ -35,14 +35,10 @@ CREATE TABLE Permisos(
     permisos varchar(255),
     FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
-<<<<<<< HEAD
-describe permisos;
-=======
 
 ALTER TABLE permisos
 MODIFY COLUMN permiso VARCHAR(255);
 
->>>>>>> 1dc07c0e1496d8ab867eef1f3bb1376c47256e4f
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
@@ -251,19 +247,3 @@ begin
 		SELECT 'Error' AS rs, "" AS Nivel;
 	END if;
 END;
-
-CREATE TABLE Permisos(
-    fk_idUsuario INT,
-    FOREIGN KEY(fk_idUsuario) REFERENCES Usuarios(idUsuarios),
-    permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
-);
-
-CREATE TABLE Usuarios(
-    idUsuarios INT PRIMARY KEY,
-    password VARCHAR(255),
-    nombre VARCHAR(255),
-    apellidoP VARCHAR(255),
-    apellidoM VARCHAR(255),
-    fechanacimiento DATE,
-    rfc VARCHAR(20) UNIQUE
-);
