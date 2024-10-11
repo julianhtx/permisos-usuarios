@@ -10,6 +10,9 @@ CREATE TABLE Usuarios(
     fechanacimiento DATE,
     rfc VARCHAR(20) UNIQUE
 );
+describe usuarios
+ALTER TABLE Usuarios 
+CHANGE COLUMN idUsuarios Username VARCHAR(255);
 
 CREATE TABLE Refacciones(
     CodigoBarras INT PRIMARY KEY,
@@ -27,33 +30,51 @@ CREATE TABLE Taller(
 );
 
 CREATE TABLE Permisos(
-    fk_idUsuario INT,
-    FOREIGN KEY(fk_idUsuario) REFERENCES Usuarios(idUsuarios),
-    permiso ENUM('Lectura', 'Escritura', 'Eliminacion', 'Actualizacion')
+    fk_Username varchar(255),
+    FrmProducto_Lectura bool,
+    FrmProducto_Escritura bool,
+    FrmProducto_Eliminacion bool,
+    FrmProducto_Actualizacion bool,
+    FrmHerramientas_Lectura bool,
+    FrmHerramientas_Escritura bool,
+    FrmHerramientas_Eliminacion bool,
+    FrmHerramientas_Actualizacion bool,
+    FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
+
+describe permisos;
+
+ALTER TABLE permisos
+MODIFY COLUMN permiso VARCHAR(255);
 
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
 DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
-CREATE PROCEDURE p_InsertarUsuarios(
-    IN _idUsuarios INT,
-    IN _password VARCHAR(255),
-    IN _nombre VARCHAR(255),
-    IN _apellidoP VARCHAR(255),
-    IN _apellidoM VARCHAR(255),
-    IN _fechanacimiento DATE,
-    IN _rfc VARCHAR(20)
+CREATE procedure p_insertar_usuarios
+(
+    in _username varchar(255),
+    in _password varchar(255),
+    in _nombre varchar(255),
+    in _apellidoP varchar(255), 
+    in _apellidoM varchar(255),
+    in _fecha_Nacimiento DATE,
+    in _rfc varchar(20),
+    in _nombre_form varchar(255),
+    in _permisos varchar(255)
 )
-BEGIN
-    INSERT INTO Usuarios ( idUsuarios, password, nombre, apellidoP, apellidoM, fechanacimiento, rfc ) VALUES(
-         _idUsuarios, _password, _nombre, _apellidoP, _apellidoM, _fechanacimiento, _rfc
-    );
-END;
+begin 
+    declare nuevo_usuario varchar(255); 
+    insert into usuarios (username, password, nombre, apellidop, apellidom, fecha_nacimiento, rfc) values 
+    (_username, _password, _nombre, _apellidop, _apellidom, _fecha_nacimiento, _rfc);
+    set nuevo_usuario = _username; 
+    insert into permisos(fk_username, nombre_form, permisos) values 
+    (nuevo_usuario, _nombre_form, _permisos); 
+end;
 
 --! MODIFICAR
 DROP PROCEDURE IF EXISTS p_ModificarUsuarios;
 CREATE PROCEDURE p_ModificarUsuarios(
-    IN _idUsuarios INT,
+    IN _Username varchar(255),
     IN _password VARCHAR(255),
     IN _nombre VARCHAR(255),
     IN _apellidoP VARCHAR(255),
@@ -71,17 +92,17 @@ BEGIN
         fechanacimiento = _fechanacimiento,
         rfc = _rfc
     WHERE
-        idUsuarios = _idUsuarios;
+        username = _username;
 END;
 
 --! ELIMINAR
 DROP PROCEDURE IF EXISTS p_EliminarUsuarios;
 CREATE PROCEDURE p_EliminarUsuarios(
-    IN _idUsuarios INT
+    IN _username INT
 )
 BEGIN
     DELETE FROM Usuarios
-    WHERE idUsuarios = _idUsuarios;
+    WHERE username = _username;
 END;
 
 --*CRUD DE REFACCIONES
@@ -174,6 +195,54 @@ BEGIN
     WHERE codigoHerramienta = _codigoHerramienta;
 END;
 
+--* CRUD DE PERMISOS
+--! CREAR E INSERTAR
+
+
+--! ARREGLAR SI O SI
+
+DROP PROCEDURE IF EXISTS p_InsertarPermisos;
+CREATE PROCEDURE p_InsertarPermisos(
+    IN _fk_username VARCHAR(255),
+    IN _nombre_form VARCHAR(255),
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    INSERT INTO Permisos (fk_idUsuario, permiso) VALUES (
+        _fk_idUsuario, _permiso
+    );
+END;
+DESCRIBE PERMISOS
+--! LEER DATO (INSERT)
+DROP PROCEDURE IF EXISTS p_ObtenerPermisos;
+CREATE PROCEDURE p_ObtenerPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    SELECT * FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! MODIFICAR
+DROP PROCEDURE IF EXISTS p_ActualizarPermisos;
+CREATE PROCEDURE p_ActualizarPermisos(
+    IN _fk_idUsuario INT,
+    IN _permiso VARCHAR(255)
+)
+BEGIN
+    UPDATE Permisos SET
+        permiso = _permiso
+    WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
+--! BORRAR
+DROP PROCEDURE IF EXISTS p_BorrarPermisos;
+CREATE PROCEDURE p_BorrarPermisos(
+    IN _fk_idUsuario INT
+)
+BEGIN
+    DELETE FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+END;
+
 /*creacion procedure de validar usuario*/
 DROP procedure if exists p_validar; 
 create procedure p_validar
@@ -182,24 +251,12 @@ create procedure p_validar
 	in _pass varchar(255)
 )
 begin 
+
 	DECLARE x INT;
 	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
 	if x > 0 then
-		SELECT 'Correcto' AS rs, (SELECT Permiso FROM permisos WHERE fk_idUsuario = _user) AS Permisos;
+		SELECT 'Correcto' AS rs, (SELECT permiso FROM Permisos WHERE fk_idUsuario = _user) AS Permisos;
 	ELSE
-		SELECT 'Error' AS rs, 0 AS Nivel;
+		SELECT 'Error' AS rs, "" AS Nivel;
 	END if;
 END;
-
-describe Permisos;
-
-call p_InsertarUsuarios (1 ,
-    sha('1234'),
-    'xXpepin',
-    'gameplais',
-    'Xx',
-    '2024-09-09',
-    'JHTM090507HJC');
-SELECT * FROM usuarios;
-
-call p_validar(1, sha1('1234'));

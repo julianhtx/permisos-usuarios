@@ -16,7 +16,7 @@ namespace Controller
         public string[] Validar(string _user, string _pass)
         {
             string[] resultado = new string[2];
-            DataSet r = f.Mostrar($"call p_validar('{_user}', '{Sha1(_pass)}')", "usuarios");
+            DataSet r = f.Mostrar($"call p_validar('{_user}', '{Sha1(_pass)}')", "Usuarios");
             DataTable dt = r.Tables[0];
             resultado[0] = dt.Rows[0]["rs"].ToString();
             resultado[1] = dt.Rows[0]["Permisos"].ToString();
