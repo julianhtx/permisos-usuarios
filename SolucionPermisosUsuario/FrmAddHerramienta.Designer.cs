@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMarcaHerramienta = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtCodigoBarras = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -49,6 +51,7 @@
             this.btnAceptar.TabIndex = 44;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -61,22 +64,22 @@
             // 
             // txtMedidaHerramienta
             // 
-            this.txtMedidaHerramienta.Location = new System.Drawing.Point(13, 184);
+            this.txtMedidaHerramienta.Location = new System.Drawing.Point(13, 214);
             this.txtMedidaHerramienta.Name = "txtMedidaHerramienta";
             this.txtMedidaHerramienta.Size = new System.Drawing.Size(308, 22);
             this.txtMedidaHerramienta.TabIndex = 39;
             // 
             // txtDescripcionHerramienta
             // 
-            this.txtDescripcionHerramienta.Location = new System.Drawing.Point(371, 116);
+            this.txtDescripcionHerramienta.Location = new System.Drawing.Point(371, 84);
             this.txtDescripcionHerramienta.Multiline = true;
             this.txtDescripcionHerramienta.Name = "txtDescripcionHerramienta";
-            this.txtDescripcionHerramienta.Size = new System.Drawing.Size(308, 174);
+            this.txtDescripcionHerramienta.Size = new System.Drawing.Size(308, 225);
             this.txtDescripcionHerramienta.TabIndex = 38;
             // 
             // txtNombreHerramienta
             // 
-            this.txtNombreHerramienta.Location = new System.Drawing.Point(13, 116);
+            this.txtNombreHerramienta.Location = new System.Drawing.Point(13, 146);
             this.txtNombreHerramienta.Name = "txtNombreHerramienta";
             this.txtNombreHerramienta.Size = new System.Drawing.Size(308, 22);
             this.txtNombreHerramienta.TabIndex = 37;
@@ -84,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 156);
+            this.label4.Location = new System.Drawing.Point(10, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 33;
@@ -93,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(379, 88);
+            this.label3.Location = new System.Drawing.Point(368, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 32;
@@ -102,7 +105,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 88);
+            this.label2.Location = new System.Drawing.Point(10, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 31;
@@ -119,7 +122,7 @@
             // 
             // txtMarcaHerramienta
             // 
-            this.txtMarcaHerramienta.Location = new System.Drawing.Point(13, 257);
+            this.txtMarcaHerramienta.Location = new System.Drawing.Point(13, 287);
             this.txtMarcaHerramienta.Name = "txtMarcaHerramienta";
             this.txtMarcaHerramienta.Size = new System.Drawing.Size(308, 22);
             this.txtMarcaHerramienta.TabIndex = 46;
@@ -127,17 +130,35 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 229);
+            this.label5.Location = new System.Drawing.Point(10, 259);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 45;
             this.label5.Text = "Marca";
+            // 
+            // txtCodigoBarras
+            // 
+            this.txtCodigoBarras.Location = new System.Drawing.Point(12, 82);
+            this.txtCodigoBarras.Name = "txtCodigoBarras";
+            this.txtCodigoBarras.Size = new System.Drawing.Size(308, 22);
+            this.txtCodigoBarras.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(113, 16);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Código de Barras";
             // 
             // FrmAddHerramienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 469);
+            this.Controls.Add(this.txtCodigoBarras);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtMarcaHerramienta);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAceptar);
@@ -169,5 +190,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMarcaHerramienta;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCodigoBarras;
+        private System.Windows.Forms.Label label6;
     }
 }

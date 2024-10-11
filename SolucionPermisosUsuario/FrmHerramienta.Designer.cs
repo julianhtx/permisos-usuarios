@@ -43,6 +43,7 @@
             this.dtgvHerramientas.RowTemplate.Height = 24;
             this.dtgvHerramientas.Size = new System.Drawing.Size(887, 413);
             this.dtgvHerramientas.TabIndex = 21;
+            this.dtgvHerramientas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHerramientas_CellEnter);
             // 
             // txtBuscarHerramienta
             // 
@@ -50,6 +51,7 @@
             this.txtBuscarHerramienta.Name = "txtBuscarHerramienta";
             this.txtBuscarHerramienta.Size = new System.Drawing.Size(888, 22);
             this.txtBuscarHerramienta.TabIndex = 20;
+            this.txtBuscarHerramienta.TextChanged += new System.EventHandler(this.txtBuscarHerramienta_TextChanged);
             // 
             // label1
             // 
