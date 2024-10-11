@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\",
+  "WorkspaceRootPath": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{FF20CBE0-2836-4D52-BABD-82CA1A96A083}|DataAccess\\DataAccess.csproj|c:\\users\\juli\u00E1n\\downloads\\permisos-usuarios\\dataaccess\\funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF20CBE0-2836-4D52-BABD-82CA1A96A083}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,6 +62,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\controller\\controlleruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|solutionrelative:controller\\controlleruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +75,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 1,
+=======
+          "SelectedChildIndex": -1,
+          "Children": []
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "313016b4-1296-4cc8-8e99-f226a6cdeb4b",
+        "Display": 0,
+        "X": 394,
+        "Y": 288,
+        "Width": 1531,
+        "Height": 749,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,6 +108,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "Funciones.cs",
               "DocumentMoniker": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\DataAccess\\Funciones.cs",
               "RelativeDocumentMoniker": "DataAccess\\Funciones.cs",
@@ -117,15 +147,22 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+=======
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
               "Title": "ControllerUser.cs",
-              "DocumentMoniker": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\Controller\\ControllerUser.cs",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerUser.cs",
               "RelativeDocumentMoniker": "Controller\\ControllerUser.cs",
-              "ToolTip": "C:\\Users\\Juli\u00E1n\\Downloads\\permisos-usuarios\\Controller\\ControllerUser.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerUser.cs",
               "RelativeToolTip": "Controller\\ControllerUser.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAABrAAAA",
+=======
+              "ViewState": "AgIAAAYAAAAAAAAAAIAwwCMAAABQAAAAAAAAAA==",
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T13:48:09.724Z",
+              "WhenOpened": "2024-10-11T00:48:39.368Z",
               "EditorCaption": ""
+<<<<<<< HEAD
             },
             {
               "$type": "Document",
@@ -261,6 +298,8 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T00:08:14.86Z",
               "EditorCaption": ""
+=======
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
             }
           ]
         }

@@ -25,11 +25,19 @@ namespace Controller
             DialogResult rs = MessageBox.Show($"Estas seguro de borrar {dato}?", "Atención!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(rs == DialogResult.Yes)
             {
-                f.Borrar($"call p_EliminarUsuarios('{Username.text}')");
+                f.Borrar($"call p_EliminarUsuarios('{Username}')");
                 MessageBox.Show("Registro eliminado con exito chaparrito", "Atención!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
+<<<<<<< HEAD
         public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, )*/
+=======
+        public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, DateTimePicker FechaNacimiento, TextBox rfc, string Username)
+        {
+            MessageBox.Show(f.Modificar($"call p_ModificarUsuarios ('{Username}', sha1('{Contraseña.Text}'), '{Nombre.Text}', '{ApellidoP.Text}', '{ApellidoM.Text}', '{FechaNacimiento.Text}', '{rfc.Text}')"),
+                "Atención!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+>>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
     }
 }
