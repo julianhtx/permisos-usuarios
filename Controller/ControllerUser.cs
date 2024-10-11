@@ -20,7 +20,7 @@ namespace Controller
                 "Atención!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void Borrar(string Username, string dato)
+        /*public void Borrar(string Username, string dato)
         {
             DialogResult rs = MessageBox.Show($"Estas seguro de borrar {dato}?", "Atención!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(rs == DialogResult.Yes)
@@ -30,6 +30,6 @@ namespace Controller
             }
         }
 
-        public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, )
+        public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, )*/
     }
 }
