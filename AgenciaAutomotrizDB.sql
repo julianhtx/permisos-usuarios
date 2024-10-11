@@ -31,10 +31,18 @@ CREATE TABLE Taller(
 
 CREATE TABLE Permisos(
     fk_Username varchar(255),
-    nombre_form varchar(255),
-    permisos varchar(255),
+    FrmProducto_Lectura bool,
+    FrmProducto_Escritura bool,
+    FrmProducto_Eliminacion bool,
+    FrmProducto_Actualizacion bool,
+    FrmHerramientas_Lectura bool,
+    FrmHerramientas_Escritura bool,
+    FrmHerramientas_Eliminacion bool,
+    FrmHerramientas_Actualizacion bool,
     FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
+
+describe permisos;
 
 ALTER TABLE permisos
 MODIFY COLUMN permiso VARCHAR(255);
