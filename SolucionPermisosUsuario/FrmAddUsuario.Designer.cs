@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -65,35 +67,35 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(807, 246);
+            this.txtPassword.Location = new System.Drawing.Point(396, 79);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(308, 22);
             this.txtPassword.TabIndex = 27;
             // 
             // txtRFC
             // 
-            this.txtRFC.Location = new System.Drawing.Point(396, 246);
+            this.txtRFC.Location = new System.Drawing.Point(396, 281);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(308, 22);
             this.txtRFC.TabIndex = 26;
             // 
             // txtApellidoM
             // 
-            this.txtApellidoM.Location = new System.Drawing.Point(807, 118);
+            this.txtApellidoM.Location = new System.Drawing.Point(807, 153);
             this.txtApellidoM.Name = "txtApellidoM";
             this.txtApellidoM.Size = new System.Drawing.Size(308, 22);
             this.txtApellidoM.TabIndex = 24;
             // 
             // txtApellidoP
             // 
-            this.txtApellidoP.Location = new System.Drawing.Point(396, 118);
+            this.txtApellidoP.Location = new System.Drawing.Point(396, 153);
             this.txtApellidoP.Name = "txtApellidoP";
             this.txtApellidoP.Size = new System.Drawing.Size(308, 22);
             this.txtApellidoP.TabIndex = 23;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(11, 118);
+            this.txtNombre.Location = new System.Drawing.Point(11, 153);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(308, 22);
             this.txtNombre.TabIndex = 22;
@@ -101,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(804, 218);
+            this.label5.Location = new System.Drawing.Point(393, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 16);
             this.label5.TabIndex = 21;
@@ -110,7 +112,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(404, 218);
+            this.label6.Location = new System.Drawing.Point(404, 253);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 16);
             this.label6.TabIndex = 20;
@@ -119,7 +121,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 218);
+            this.label7.Location = new System.Drawing.Point(8, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 16);
             this.label7.TabIndex = 19;
@@ -128,7 +130,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(804, 90);
+            this.label4.Location = new System.Drawing.Point(804, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 16);
             this.label4.TabIndex = 18;
@@ -137,7 +139,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(404, 90);
+            this.label3.Location = new System.Drawing.Point(404, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 17;
@@ -146,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 90);
+            this.label2.Location = new System.Drawing.Point(8, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 16;
@@ -164,16 +166,34 @@
             // dtpFechaNac
             // 
             this.dtpFechaNac.CustomFormat = "YYYY-MM-DD";
-            this.dtpFechaNac.Location = new System.Drawing.Point(11, 246);
+            this.dtpFechaNac.Location = new System.Drawing.Point(11, 281);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(305, 22);
             this.dtpFechaNac.TabIndex = 30;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(12, 79);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(308, 22);
+            this.txtUsername.TabIndex = 33;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 16);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Username";
             // 
             // FrmAddUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 435);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dtpFechaNac);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
@@ -213,5 +233,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label9;
     }
 }
