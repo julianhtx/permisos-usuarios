@@ -31,18 +31,22 @@ CREATE TABLE Taller(
 
 CREATE TABLE Permisos(
     fk_Username varchar(255),
-    FrmProducto_Lectura bool,
-    FrmProducto_Escritura bool,
-    FrmProducto_Eliminacion bool,
-    FrmProducto_Actualizacion bool,
-    FrmHerramientas_Lectura bool,
-    FrmHerramientas_Escritura bool,
-    FrmHerramientas_Eliminacion bool,
-    FrmHerramientas_Actualizacion bool,
+    FrmUsuarios_Lectura bit,
+    FrmUsuarios_Escritura bit,
+    FrmUsuarios_Actualizacion bit,
+    FrmUsuarios_Eliminacion bit,
+    FrmProducto_Lectura bit,
+    FrmProducto_Escritura bit,
+    FrmProducto_Eliminacion bit,
+    FrmProducto_Actualizacion bit,
+    FrmHerramientas_Lectura bit,
+    FrmHerramientas_Escritura bit,
+    FrmHerramientas_Eliminacion bit,
+    FrmHerramientas_Actualizacion bit,
     FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
 );
 
-describe permisos;
+drop table Permisos;
 
 ALTER TABLE permisos
 MODIFY COLUMN permiso VARCHAR(255);
@@ -70,6 +74,8 @@ begin
     insert into permisos(fk_username, nombre_form, permisos) values 
     (nuevo_usuario, _nombre_form, _permisos); 
 end;
+
+describe permisos;
 
 --! MODIFICAR
 DROP PROCEDURE IF EXISTS p_ModificarUsuarios;
@@ -247,16 +253,57 @@ END;
 DROP procedure if exists p_validar; 
 create procedure p_validar
 (
-	in _user INT,
+	in _user varchar(255),
 	in _pass varchar(255)
 )
 begin 
-
 	DECLARE x INT;
-	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
+	SELECT COUNT(*) FROM usuarios WHERE username = _user AND password = _pass INTO x;
 	if x > 0 then
-		SELECT 'Correcto' AS rs, (SELECT permiso FROM Permisos WHERE fk_idUsuario = _user) AS Permisos;
+		SELECT 'Correcto' AS rs, username, password, 
+            FrmUsuarios_Lectura, FrmUsuarios_Escritura, FrmUsuarios_Eliminacion, FrmUsuarios_Actualizacion,
+            FrmProducto_Lectura, FrmProducto_Escritura, FrmProducto_Eliminacion, FrmProducto_Actualizacion,
+            FrmHerramientas_Lectura, FrmHerramientas_Escritura, FrmHerramientas_Eliminacion, FrmHerramientas_Actualizacion
+             FROM v_UsuariosPermisos WHERE Username = _user;
 	ELSE
 		SELECT 'Error' AS rs, "" AS Nivel;
 	END if;
 END;
+
+drop view if exists v_UsuariosPermisos;
+CREATE VIEW v_UsuariosPermisos AS
+SELECT 
+    u.Username,
+    u.password,
+    p.FrmUsuarios_Lectura,
+    p.FrmUsuarios_Escritura,
+    p.FrmUsuarios_Eliminacion,
+    p.FrmUsuarios_Actualizacion,
+    p.FrmProducto_Lectura,
+    p.FrmProducto_Escritura,
+    p.FrmProducto_Eliminacion,
+    p.FrmProducto_Actualizacion,
+    p.FrmHerramientas_Lectura,
+    p.FrmHerramientas_Escritura,
+    p.FrmHerramientas_Eliminacion,
+    p.FrmHerramientas_Actualizacion
+FROM 
+    Usuarios u
+JOIN 
+    Permisos p ON u.Username = p.fk_Username;
+
+describe v_UsuariosPermisos;
+describe usuarios;
+describe permisos;
+select * from permisos;
+select * from usuarios;
+
+insert into usuarios values ('Pepin', sha1('1234'), 'xXPepin', 'Gameplais', 'Xx', '2004-12-15', 'vetm04ert');
+insert into permisos values ('Pepin', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+insert into usuarios values ('Pepinillo', sha1('1234'), 'xXPepinillo', 'Games', 'Xx', '2004-12-15', 'vetm04');
+insert into permisos values ('Pepinillo', 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0);
+insert into usuarios values ('Pepinilla', sha1('1234'), 'xXPepinilla', 'Game', 'Xx', '2004-12-15', 'vetm');
+insert into permisos values ('Pepinilla', 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0);
+
+call p_validar('Pepin', sha1('1234'));
+

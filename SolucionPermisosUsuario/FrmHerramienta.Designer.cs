@@ -31,6 +31,9 @@
             this.dtgvHerramientas = new System.Windows.Forms.DataGridView();
             this.txtBuscarHerramienta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHerramientas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +44,7 @@
             this.dtgvHerramientas.Name = "dtgvHerramientas";
             this.dtgvHerramientas.RowHeadersWidth = 51;
             this.dtgvHerramientas.RowTemplate.Height = 24;
-            this.dtgvHerramientas.Size = new System.Drawing.Size(887, 413);
+            this.dtgvHerramientas.Size = new System.Drawing.Size(887, 353);
             this.dtgvHerramientas.TabIndex = 21;
             this.dtgvHerramientas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHerramientas_CellEnter);
             // 
@@ -62,11 +65,41 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "BUSCAR HERRAMIENTAS";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(61, 456);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(182, 36);
+            this.btnAdd.TabIndex = 22;
+            this.btnAdd.Text = "Agregar Herramientas";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(367, 456);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(182, 36);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Modificar Herramienta";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(677, 456);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(182, 36);
+            this.btnDel.TabIndex = 24;
+            this.btnDel.Text = "Eliminar Herramienta";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
             // FrmHerramienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 504);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtgvHerramientas);
             this.Controls.Add(this.txtBuscarHerramienta);
             this.Controls.Add(this.label1);
@@ -83,5 +116,8 @@
         private System.Windows.Forms.DataGridView dtgvHerramientas;
         private System.Windows.Forms.TextBox txtBuscarHerramienta;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnDel;
     }
 }

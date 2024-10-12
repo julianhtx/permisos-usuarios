@@ -50,3 +50,5 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\System.IO.Pipelines.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.pdb

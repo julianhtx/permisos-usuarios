@@ -37,3 +37,5 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\K4os.Co
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\System.IO.Pipelines.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.pdb

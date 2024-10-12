@@ -1,0 +1,6 @@
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\bin\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\bin\Debug\Identities.pdb
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\obj\Debug\Identities.csproj.AssemblyReference.cache
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\obj\Debug\Identities.csproj.CoreCompileInputs.cache
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\obj\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Identities\obj\Debug\Identities.pdb
