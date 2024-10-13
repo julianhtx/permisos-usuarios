@@ -45,6 +45,17 @@
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.dtgvPermisos = new System.Windows.Forms.DataGridView();
+            this.Formulario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lectura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Escritura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Eliminacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Actualizar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).BeginInit();
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -64,6 +75,7 @@
             this.btnCancelar.TabIndex = 28;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtPassword
             // 
@@ -187,6 +199,85 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "Username";
             // 
+<<<<<<< HEAD
+=======
+            // dtgvPermisos
+            // 
+            this.dtgvPermisos.AllowUserToAddRows = false;
+            this.dtgvPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPermisos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Formulario,
+            this.Lectura,
+            this.Escritura,
+            this.Eliminacion,
+            this.Actualizar});
+            this.dtgvPermisos.Location = new System.Drawing.Point(11, 375);
+            this.dtgvPermisos.Name = "dtgvPermisos";
+            this.dtgvPermisos.RowHeadersWidth = 51;
+            this.dtgvPermisos.RowTemplate.Height = 24;
+            this.dtgvPermisos.Size = new System.Drawing.Size(1135, 150);
+            this.dtgvPermisos.TabIndex = 34;
+            // 
+            // Formulario
+            // 
+            this.Formulario.Frozen = true;
+            this.Formulario.HeaderText = "Formulario";
+            this.Formulario.MinimumWidth = 6;
+            this.Formulario.Name = "Formulario";
+            this.Formulario.ReadOnly = true;
+            this.Formulario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Formulario.Width = 125;
+            // 
+            // Lectura
+            // 
+            this.Lectura.Frozen = true;
+            this.Lectura.HeaderText = "Lectura";
+            this.Lectura.MinimumWidth = 6;
+            this.Lectura.Name = "Lectura";
+            this.Lectura.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lectura.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Lectura.Width = 125;
+            // 
+            // Escritura
+            // 
+            this.Escritura.Frozen = true;
+            this.Escritura.HeaderText = "Escritura";
+            this.Escritura.MinimumWidth = 6;
+            this.Escritura.Name = "Escritura";
+            this.Escritura.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Escritura.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Escritura.Width = 125;
+            // 
+            // Eliminacion
+            // 
+            this.Eliminacion.Frozen = true;
+            this.Eliminacion.HeaderText = "Eliminacion";
+            this.Eliminacion.MinimumWidth = 6;
+            this.Eliminacion.Name = "Eliminacion";
+            this.Eliminacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminacion.Width = 125;
+            // 
+            // Actualizar
+            // 
+            this.Actualizar.Frozen = true;
+            this.Actualizar.HeaderText = "Actualizar";
+            this.Actualizar.MinimumWidth = 6;
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Actualizar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Actualizar.Width = 125;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 341);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 16);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "PERMISOS";
+            // 
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // FrmAddUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

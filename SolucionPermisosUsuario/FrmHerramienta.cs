@@ -18,32 +18,65 @@ namespace SolucionPermisosUsuario
         ControllerHerramienta ch;
         static int fila = 0, columna = 0;
         public static int codigoHerramienta;
-        public static string nombre, medida, marca, descripcion;
+        public static double medida;
+        public static string nombre, marca, descripcion;
 
-        private void dtgvHerramientas_CellEnter(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            fila = e.RowIndex; columna = e.ColumnIndex;
-            switch (columna)
+            FrmAddHerramienta fah = new FrmAddHerramienta();
+            fah.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(codigoHerramienta.ToString()))
             {
-                case 5:
-                    {
-                        codigoHerramienta = int.Parse(dtgvHerramientas.Rows[fila].Cells[0].Value.ToString());
-                        ch.Borrar(codigoHerramienta, dtgvHerramientas.Rows[fila].Cells[1].Value.ToString());
-                        dtgvHerramientas.Visible = false;
-                    }
-                    break;
-                case 6:
-                    {
-                        codigoHerramienta = int.Parse(dtgvHerramientas.Rows[fila].Cells[0].Value.ToString());
-                        nombre = dtgvHerramientas.Rows[fila].Cells[1].Value.ToString();
-                        medida = dtgvHerramientas.Rows[fila].Cells[2].Value.ToString();
-                        marca = dtgvHerramientas.Rows[fila].Cells[3].Value.ToString();
-                        descripcion = dtgvHerramientas.Rows[fila].Cells[4].Value.ToString();
-                        FrmAddHerramienta Add = new FrmAddHerramienta();
-                        Add.ShowDialog();
-                        dtgvHerramientas.Visible = false;
-                    }
-                    break;
+                /*codigoHerramienta = int.Parse(dtgvHerramientas.Rows[fila].Cells[0].Value.ToString());
+                nombre = dtgvHerramientas.Rows[fila].Cells[1].Value.ToString();
+                medida = double.Parse(dtgvHerramientas.Rows[fila].Cells[2].Value.ToString());
+                marca = dtgvHerramientas.Rows[fila].Cells[3].Value.ToString();
+                descripcion = dtgvHerramientas.Rows[fila].Cells[4].Value.ToString();*/
+                FrmAddHerramienta formulario = new FrmAddHerramienta();
+                formulario.SetData(codigoHerramienta, nombre, medida, marca, descripcion); // Método que debes crear en el formulario
+                formulario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor selecciona un usuario para modificar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (dtgvHerramientas.SelectedRows.Count > 0)
+            {
+                // Obtén el username de la fila seleccionada (ajusta el índice según tu DataGridView)
+                codigoHerramienta = int.Parse(dtgvHerramientas.SelectedRows[0].Cells["codigoHerramienta"].Value.ToString());
+
+                // Llama al método Borrar del manejador
+                ch.Borrar(codigoHerramienta);
+            }
+            else
+            {
+                MessageBox.Show("Por favor selecciona un usuario para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dtgvHerramientas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Asegúrate de que la fila es válida
+            {
+                DataGridViewRow row = dtgvHerramientas.Rows[e.RowIndex];
+
+                // Almacena los datos de la fila seleccionada en las variables
+                codigoHerramienta = int.Parse(row.Cells["codigoHerramienta"].Value.ToString()); // Asegúrate de que este valor sea seguro
+                nombre = row.Cells["nombre"].Value.ToString();
+                medida = double.Parse(row.Cells["medida"].Value.ToString());
+                marca = row.Cells["marca"].Value.ToString();
+                descripcion = row.Cells["descripcion"].Value.ToString();
+
+                // Cambia el color de la fila seleccionada (opcional)
+                row.Selected = true; // Esto selecciona la fila visualmente
             }
         }
 
@@ -51,6 +84,7 @@ namespace SolucionPermisosUsuario
         {
             InitializeComponent();
             ch = new ControllerHerramienta();
+            VerificarPermisos();
         }
 
         private void txtBuscarHerramienta_TextChanged(object sender, EventArgs e)
@@ -58,5 +92,24 @@ namespace SolucionPermisosUsuario
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
         }
 
+<<<<<<< HEAD
+=======
+        private void VerificarPermisos()
+        {
+            if(!IdentitiesPermisos.Herramientas_Escritura)
+            {
+                btnAdd.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+
+            btnEditar.Visible = IdentitiesPermisos.Herramientas_Actualizacion;
+
+            if (!IdentitiesPermisos.Herramientas_Eliminacion)
+            {
+                btnDel.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+        }
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
     }
 }

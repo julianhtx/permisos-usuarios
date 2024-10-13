@@ -43,7 +43,7 @@
             this.dtgvHerramientas.RowTemplate.Height = 24;
             this.dtgvHerramientas.Size = new System.Drawing.Size(887, 413);
             this.dtgvHerramientas.TabIndex = 21;
-            this.dtgvHerramientas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHerramientas_CellEnter);
+            this.dtgvHerramientas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHerramientas_CellClick);
             // 
             // txtBuscarHerramienta
             // 
@@ -62,6 +62,39 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "BUSCAR HERRAMIENTAS";
             // 
+<<<<<<< HEAD
+=======
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(61, 456);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(182, 36);
+            this.btnAdd.TabIndex = 22;
+            this.btnAdd.Text = "Agregar Herramientas";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(367, 456);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(182, 36);
+            this.btnEditar.TabIndex = 23;
+            this.btnEditar.Text = "Modificar Herramienta";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(677, 456);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(182, 36);
+            this.btnDel.TabIndex = 24;
+            this.btnDel.Text = "Eliminar Herramienta";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // FrmHerramienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

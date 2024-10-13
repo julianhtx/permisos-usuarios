@@ -37,11 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtCodigoBarras = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtMarcaProducto
             // 
-            this.txtMarcaProducto.Location = new System.Drawing.Point(13, 182);
+            this.txtMarcaProducto.Location = new System.Drawing.Point(13, 251);
             this.txtMarcaProducto.Name = "txtMarcaProducto";
             this.txtMarcaProducto.Size = new System.Drawing.Size(308, 22);
             this.txtMarcaProducto.TabIndex = 57;
@@ -49,7 +51,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 154);
+            this.label5.Location = new System.Drawing.Point(10, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 56;
@@ -63,6 +65,7 @@
             this.btnAceptar.TabIndex = 55;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -72,6 +75,7 @@
             this.btnCancelar.TabIndex = 54;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtDescripcionProducto
             // 
@@ -83,7 +87,7 @@
             // 
             // txtNombreProducto
             // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(13, 114);
+            this.txtNombreProducto.Location = new System.Drawing.Point(13, 183);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(308, 22);
             this.txtNombreProducto.TabIndex = 51;
@@ -100,7 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 86);
+            this.label2.Location = new System.Drawing.Point(10, 155);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 48;
@@ -115,11 +119,29 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "AGREGAR / MODIFICAR PRODUCTOS";
             // 
+            // txtCodigoBarras
+            // 
+            this.txtCodigoBarras.Location = new System.Drawing.Point(13, 114);
+            this.txtCodigoBarras.Name = "txtCodigoBarras";
+            this.txtCodigoBarras.Size = new System.Drawing.Size(308, 22);
+            this.txtCodigoBarras.TabIndex = 59;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 16);
+            this.label4.TabIndex = 58;
+            this.label4.Text = "Código de Barras";
+            // 
             // FrmAddRefaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 450);
+            this.Controls.Add(this.txtCodigoBarras);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMarcaProducto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAceptar);
@@ -131,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddRefaccion";
             this.Text = "FrmAddRefaccion";
+            this.Load += new System.EventHandler(this.FrmAddRefaccion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +170,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCodigoBarras;
+        private System.Windows.Forms.Label label4;
     }
 }
