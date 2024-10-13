@@ -53,13 +53,32 @@ namespace Controller
             MessageBox.Show("Usuario y permisos guardados con éxito", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void Borrar(string Username, string dato)
+        public void Borrar(string Username)
         {
-            DialogResult rs = MessageBox.Show($"Estas seguro de borrar {dato}?", "Atención!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(rs == DialogResult.Yes)
+            DialogResult rs = MessageBox.Show($"¿Estás seguro de borrar a {Username}?", "Atención!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
             {
-                f.Borrar($"call p_EliminarUsuarios('{Username}')");
-                MessageBox.Show("Registro eliminado con exito chaparrito", "Atención!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Primero, eliminar permisos asociados al usuario
+                string queryEliminarPermisos = $"call p_eliminar_permisos('{Username}');";
+                string resultadoPermisos = f.Guardar(queryEliminarPermisos);
+
+                if (resultadoPermisos != "Correcto")
+                {
+                    MessageBox.Show($"Error al eliminar permisos para {Username}: {resultadoPermisos}, llame a el administrador para revisar el error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir si hay un error al eliminar permisos
+                }
+
+                // Luego, eliminar el usuario
+                string queryEliminarUsuario = $"call p_EliminarUsuarios('{Username}');";
+                string resultadoUsuario = f.Guardar(queryEliminarUsuario);
+
+                if (resultadoUsuario != "Correcto")
+                {
+                    MessageBox.Show($"Error al eliminar el usuario: {resultadoUsuario}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir si hay un error al eliminar el usuario
+                }
+
+                MessageBox.Show("Registro eliminado con éxito", "Atención!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

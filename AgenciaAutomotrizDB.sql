@@ -91,7 +91,7 @@ END;
 --! ELIMINAR
 DROP PROCEDURE IF EXISTS p_EliminarUsuarios;
 CREATE PROCEDURE p_EliminarUsuarios(
-    IN _username INT
+    IN _username varchar(255)
 )
 BEGIN
     DELETE FROM Usuarios
@@ -207,14 +207,13 @@ END;
 DESCRIBE PERMISOS
 
 --! BORRAR
-DROP PROCEDURE IF EXISTS p_BorrarPermisos;
+DROP PROCEDURE IF EXISTS p_eliminar_permisos;
 CREATE PROCEDURE p_eliminar_permisos(
-    IN p_Username VARCHAR(255),
-    IN p_NombreFormulario VARCHAR(255)
+    IN p_Username VARCHAR(255)
 )
 BEGIN
     DELETE FROM Permisos
-    WHERE fk_Username = p_Username AND NombreFormulario = p_NombreFormulario;
+    WHERE fk_Username = p_Username;
 END;
 
 /*creacion procedure de validar usuario*/

@@ -17,6 +17,23 @@ namespace SolucionPermisosUsuario
         public static string username, password, nombre, apellidoP, apellidoM, fechaNac, rfc = "";
         ControllerUser Cu;
 
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            // Asegúrate de que hay una fila seleccionada
+            if (dtgvUsuarios.SelectedRows.Count > 0)
+            {
+                // Obtén el username de la fila seleccionada (ajusta el índice según tu DataGridView)
+                string usernameSeleccionado = dtgvUsuarios.SelectedRows[0].Cells["Username"].Value.ToString();
+
+                // Llama al método Borrar del manejador
+                Cu.Borrar(usernameSeleccionado);
+            }
+            else
+            {
+                MessageBox.Show("Por favor selecciona un usuario para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
         {
             Cu.MostrarGeneral(dtgvUsuarios, txtBuscarUsuario.Text);
