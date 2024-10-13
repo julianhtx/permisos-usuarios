@@ -37,6 +37,7 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\K4os.Co
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\System.IO.Pipelines.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\System.Numerics.Vectors.xml
+<<<<<<< HEAD
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.dll.config
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.pdb
@@ -76,3 +77,7 @@ C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.csp
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.csproj.Up2Date
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.pdb
+=======
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.pdb
+>>>>>>> 51b404c0e1b3999db42fe4d784c8f6fe279dbc32

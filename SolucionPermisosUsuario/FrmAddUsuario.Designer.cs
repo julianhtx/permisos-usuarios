@@ -45,20 +45,29 @@
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.dtgvPermisos = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Formulario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lectura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Escritura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Eliminacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Actualizar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(669, 344);
+            this.btnAceptar.Location = new System.Drawing.Point(668, 572);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(225, 63);
             this.btnAceptar.TabIndex = 29;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(268, 344);
+            this.btnCancelar.Location = new System.Drawing.Point(274, 572);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(225, 63);
             this.btnCancelar.TabIndex = 28;
@@ -187,11 +196,78 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "Username";
             // 
+            // dtgvPermisos
+            // 
+            this.dtgvPermisos.AllowUserToAddRows = false;
+            this.dtgvPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvPermisos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Formulario,
+            this.Lectura,
+            this.Escritura,
+            this.Eliminacion,
+            this.Actualizar});
+            this.dtgvPermisos.Location = new System.Drawing.Point(11, 375);
+            this.dtgvPermisos.Name = "dtgvPermisos";
+            this.dtgvPermisos.RowTemplate.Height = 24;
+            this.dtgvPermisos.Size = new System.Drawing.Size(1135, 150);
+            this.dtgvPermisos.TabIndex = 34;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 341);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 16);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "PERMISOS";
+            // 
+            // Formulario
+            // 
+            this.Formulario.Frozen = true;
+            this.Formulario.HeaderText = "Formulario";
+            this.Formulario.Name = "Formulario";
+            this.Formulario.ReadOnly = true;
+            this.Formulario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Lectura
+            // 
+            this.Lectura.Frozen = true;
+            this.Lectura.HeaderText = "Lectura";
+            this.Lectura.Name = "Lectura";
+            this.Lectura.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lectura.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Escritura
+            // 
+            this.Escritura.Frozen = true;
+            this.Escritura.HeaderText = "Escritura";
+            this.Escritura.Name = "Escritura";
+            this.Escritura.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Escritura.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Eliminacion
+            // 
+            this.Eliminacion.Frozen = true;
+            this.Eliminacion.HeaderText = "Eliminacion";
+            this.Eliminacion.Name = "Eliminacion";
+            this.Eliminacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Actualizar
+            // 
+            this.Actualizar.Frozen = true;
+            this.Actualizar.HeaderText = "Actualizar";
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Actualizar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // FrmAddUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 435);
+            this.ClientSize = new System.Drawing.Size(1158, 647);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dtgvPermisos);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtpFechaNac);
@@ -211,6 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddUsuario";
             this.Text = "FrmAddUsuario";
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +312,12 @@
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dtgvPermisos;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Formulario;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Lectura;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Escritura;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminacion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Actualizar;
     }
 }

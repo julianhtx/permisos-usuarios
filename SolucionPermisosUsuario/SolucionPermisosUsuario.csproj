@@ -148,6 +148,10 @@
       <Project>{021752da-6622-41a1-8229-2f4b123d5ee7}</Project>
       <Name>Controller</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Identities\Identities.csproj">
+      <Project>{104f53ee-877e-47fb-b79e-7ffc708087d2}</Project>
+      <Name>Identities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconoLogin-removebg-preview.png" />

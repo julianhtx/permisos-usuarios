@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Identities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,5 +55,6 @@ namespace SolucionPermisosUsuario
         {
             cr.Mostrar(dtgvProductos, txtBuscarProducto.Text);
         }
+
     }
 }

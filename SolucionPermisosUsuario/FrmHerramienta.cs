@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
+using Identities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SolucionPermisosUsuario
@@ -58,5 +59,21 @@ namespace SolucionPermisosUsuario
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
         }
 
+        private void VerificarPermisos()
+        {
+            if(!IdentitiesPermisos.Producto_Escritura)
+            {
+                btnAdd.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+
+            btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
+
+            if (!IdentitiesPermisos.Producto_Eliminacion)
+            {
+                btnDel.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+        }
     }
 }

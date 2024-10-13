@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarUsuario = new System.Windows.Forms.TextBox();
             this.dtgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +52,7 @@
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(888, 22);
             this.txtBuscarUsuario.TabIndex = 17;
+            this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
             // 
             // dtgvUsuarios
             // 
@@ -59,12 +63,46 @@
             this.dtgvUsuarios.RowTemplate.Height = 24;
             this.dtgvUsuarios.Size = new System.Drawing.Size(887, 413);
             this.dtgvUsuarios.TabIndex = 18;
+            this.dtgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellClick);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(18, 496);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(225, 52);
+            this.btnAdd.TabIndex = 29;
+            this.btnAdd.Text = "AGREGAR";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(364, 496);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(225, 52);
+            this.btnEdit.TabIndex = 30;
+            this.btnEdit.Text = "MODIFICAR";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(680, 496);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(225, 52);
+            this.btnDel.TabIndex = 31;
+            this.btnDel.Text = "ELIMINAR";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 498);
+            this.ClientSize = new System.Drawing.Size(918, 560);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtgvUsuarios);
             this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.label1);
@@ -81,5 +119,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscarUsuario;
         private System.Windows.Forms.DataGridView dtgvUsuarios;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnDel;
     }
 }

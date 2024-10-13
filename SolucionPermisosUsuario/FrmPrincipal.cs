@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Identities;
 
 namespace SolucionPermisosUsuario
 {
@@ -15,6 +16,7 @@ namespace SolucionPermisosUsuario
         public FrmPrincipal()
         {
             InitializeComponent();
+            VerificarPermisos();
         }
 
         private void tsSalir_Click(object sender, EventArgs e)
@@ -41,6 +43,13 @@ namespace SolucionPermisosUsuario
             FrmHerramienta fh = new FrmHerramienta();
             fh.MdiParent = this;    
             fh.Show();
+        }
+
+        public void VerificarPermisos()
+        {
+            tsUsuario.Visible = IdentitiesPermisos.Usuarios_Lectura;
+            tsRefacciones.Visible = IdentitiesPermisos.Producto_Lectura;
+            tsTaller.Visible = IdentitiesPermisos.Herramientas_Lectura;
         }
     }
 }

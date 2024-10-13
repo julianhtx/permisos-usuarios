@@ -50,6 +50,7 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\System.IO.Pipelines.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\System.Numerics.Vectors.xml
+<<<<<<< HEAD
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.exe.config
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.exe
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.pdb
@@ -102,3 +103,7 @@ C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\S
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\Solucion.AA04A859.Up2Date
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\SolucionPermisosUsuario.exe
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\SolucionPermisosUsuario.pdb
+=======
+C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.dll
+C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.pdb
+>>>>>>> 51b404c0e1b3999db42fe4d784c8f6fe279dbc32

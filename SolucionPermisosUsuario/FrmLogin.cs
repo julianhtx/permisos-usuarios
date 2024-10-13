@@ -31,10 +31,8 @@ namespace SolucionPermisosUsuario
             if (r[0].Equals("Correcto"))
             {
                 this.Hide();
-                int nivelUsuario = int.Parse(r[1]);
 
-                FrmPrincipal principal = new FrmPrincipal(//permisosUsuario
-                                                          );
+                FrmPrincipal principal = new FrmPrincipal();
                 principal.Show();
             }
             else

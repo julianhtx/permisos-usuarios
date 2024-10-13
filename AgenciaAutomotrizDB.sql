@@ -305,4 +305,9 @@ call p_insertar_usuarios('kiubo', sha1('1234'), 'LG', 'U', 'E', '2004-10-15', 'L
 
 CALL p_insertar_permisos('username', 'nombreFormulario', 1, 0, 1, 0);
 delete from usuarios where username = "Joaquin";
+<<<<<<< HEAD
 select * from VistaUsuarioPermisos;
+=======
+select * from VistaUsuarioPermisos;
+
+>>>>>>> 51b404c0e1b3999db42fe4d784c8f6fe279dbc32
