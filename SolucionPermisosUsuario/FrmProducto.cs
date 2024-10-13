@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-﻿using Identities;
+using Identities;
 using System;
-=======
-<<<<<<< HEAD
 ﻿using System;
-=======
 ﻿using Controller;
 using Identities;
 using System;
->>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
->>>>>>> feature/forms-system
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +13,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
 using Controller;
-=======
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
->>>>>>> feature/forms-system
-
 namespace SolucionPermisosUsuario
 {
     public partial class FrmProducto : Form
@@ -34,11 +24,11 @@ namespace SolucionPermisosUsuario
         public static int codigoBarras;
         public static string nombre, marca, descripcion;
 
-<<<<<<< HEAD
+
         private void dtgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
-=======
+
         /*private void dtgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
->>>>>>> feature/forms-system
+
         {
             fila = e.RowIndex; columna = e.ColumnIndex;
             switch (columna)
@@ -62,8 +52,8 @@ namespace SolucionPermisosUsuario
                     }
                     break;
             }
-<<<<<<< HEAD
-=======
+
+
         }*/
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -121,7 +111,7 @@ namespace SolucionPermisosUsuario
                 // Cambia el color de la fila seleccionada (opcional)
                 row.Selected = true; // Esto selecciona la fila visualmente
             }
->>>>>>> feature/forms-system
+
         }
 
         public FrmProducto()
@@ -129,19 +119,12 @@ namespace SolucionPermisosUsuario
             InitializeComponent();
             cr = new ControllerRefaccion();
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> feature/forms-system
-
         private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
         {
             cr.Mostrar(dtgvProductos, txtBuscarProducto.Text);
         }
 
-<<<<<<< HEAD
-=======
+
         private void VerificarPermisos()
         {
             if (!IdentitiesPermisos.Producto_Escritura)
@@ -158,7 +141,5 @@ namespace SolucionPermisosUsuario
                 //falta lo de las posiciones de botones
             }
         }
->>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
->>>>>>> feature/forms-system
     }
 }

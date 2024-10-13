@@ -65,11 +65,11 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "BUSCAR HERRAMIENTAS";
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> feature/forms-system
+
+
+
+
+
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(61, 456);
@@ -78,10 +78,10 @@
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "Agregar Herramientas";
             this.btnAdd.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-=======
+
+
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
->>>>>>> feature/forms-system
+
             // 
             // btnEditar
             // 
@@ -91,10 +91,10 @@
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Modificar Herramienta";
             this.btnEditar.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-=======
+
+
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
->>>>>>> feature/forms-system
+
             // 
             // btnDel
             // 
@@ -104,13 +104,13 @@
             this.btnDel.TabIndex = 24;
             this.btnDel.Text = "Eliminar Herramienta";
             this.btnDel.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
+
             // 
-=======
+
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
->>>>>>> feature/forms-system
+
             // FrmHerramienta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

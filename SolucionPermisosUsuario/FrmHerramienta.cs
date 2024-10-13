@@ -93,39 +93,39 @@ namespace SolucionPermisosUsuario
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
         }
 
-<<<<<<< HEAD
+
         private void VerificarPermisos()
         {
             if(!IdentitiesPermisos.Producto_Escritura)
-=======
-<<<<<<< HEAD
-=======
+
+
+
         private void VerificarPermisos()
         {
             if(!IdentitiesPermisos.Herramientas_Escritura)
->>>>>>> feature/forms-system
+
             {
                 btnAdd.Visible = false;
                 //falta lo de las posiciones de botones
             }
 
-<<<<<<< HEAD
+
             btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
 
             if (!IdentitiesPermisos.Producto_Eliminacion)
-=======
+
             btnEditar.Visible = IdentitiesPermisos.Herramientas_Actualizacion;
 
             if (!IdentitiesPermisos.Herramientas_Eliminacion)
->>>>>>> feature/forms-system
+
             {
                 btnDel.Visible = false;
                 //falta lo de las posiciones de botones
             }
         }
-<<<<<<< HEAD
-=======
+
+
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
->>>>>>> feature/forms-system
+
     }
 }

@@ -46,11 +46,11 @@
             this.dtgvProductos.RowTemplate.Height = 24;
             this.dtgvProductos.Size = new System.Drawing.Size(887, 354);
             this.dtgvProductos.TabIndex = 21;
-<<<<<<< HEAD
+
             this.dtgvProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellEnter);
-=======
+
             this.dtgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellClick);
->>>>>>> feature/forms-system
+
             // 
             // txtBuscarProducto
             // 
