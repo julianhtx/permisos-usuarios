@@ -17,9 +17,9 @@ namespace Controller
             MessageBox.Show(f.Guardar($"insert into Taller (codigoHerramienta, nombre, medida, marca, descripcion) values ({codigoHerramienta.Text}, '{nombre.Text}', '{medida.Text}', '{marca.Text}', '{descripcion.Text}')"),
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public void Borrar(int ID, string dato)
+        public void Borrar(int ID)
         {
-            DialogResult rs = MessageBox.Show($"Estas seguro de borrar {dato}?", "Atencion!!",
+            DialogResult rs = MessageBox.Show($"Estas seguro de borrar {ID}?", "Atencion!!",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
@@ -48,8 +48,6 @@ namespace Controller
         {
             tabla.Columns.Clear();
             tabla.DataSource = f.Mostrar($"select * from Taller where nombre like '%{filtro}%'", "Taller").Tables[0];
-            tabla.Columns.Insert(5, Boton("Borrar", Color.Red));
-            tabla.Columns.Insert(6, Boton("Editar", Color.Green));
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }

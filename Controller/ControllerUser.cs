@@ -53,7 +53,11 @@ namespace Controller
             MessageBox.Show("Usuario y permisos guardados con éxito", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+<<<<<<< HEAD
         public void Borrar(string Username)
+=======
+        /*public void Borrar(string Username, string dato)
+>>>>>>> feature/forms-system
         {
             DialogResult rs = MessageBox.Show($"¿Estás seguro de borrar a {Username}?", "Atención!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
@@ -82,7 +86,13 @@ namespace Controller
             }
         }
 
+<<<<<<< HEAD
         public void Modificar(TextBox Username, TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, DateTimePicker FechaNacimiento, TextBox Rfc, DataGridView permisos)
+=======
+
+        public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, )*/
+        public void Modificar(TextBox Contraseña, TextBox Nombre, TextBox ApellidoP, TextBox ApellidoM, DateTimePicker FechaNacimiento, TextBox rfc, string Username)
+>>>>>>> feature/forms-system
         {
             string fechaNacimiento = FechaNacimiento.Value.ToString("yyyy-MM-dd");
             // Actualizar usuario

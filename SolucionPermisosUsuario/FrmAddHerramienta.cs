@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SolucionPermisosUsuario
 {
@@ -18,20 +19,29 @@ namespace SolucionPermisosUsuario
         {
             InitializeComponent();
             ch = new ControllerHerramienta();
-            txtCodigoBarras.Text = FrmHerramienta.codigoHerramienta.ToString();
-            txtNombreHerramienta.Text = FrmHerramienta.nombre.ToString();
-            txtMedidaHerramienta.Text = FrmHerramienta.medida.ToString();
-            txtMarcaHerramienta.Text = FrmHerramienta.marca.ToString();
-            txtDescripcionHerramienta.Text = FrmHerramienta.descripcion.ToString();
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (FrmHerramienta.codigoHerramienta > 0)
+            {
                 ch.Modificar(txtCodigoBarras, txtNombreHerramienta, txtMedidaHerramienta, txtMarcaHerramienta, txtDescripcionHerramienta);
+                MessageBox.Show("Herramienta modificada exitosamente.");
+            }
             else
+            {
                 ch.Guardar(txtCodigoBarras, txtNombreHerramienta, txtMedidaHerramienta, txtMarcaHerramienta, txtDescripcionHerramienta);
+                MessageBox.Show("Herramienta agregada exitosamente.");
+            }
             Close();
+        }
+        public void SetData(int codigoHerramienta, string nombre, double medida, string marca, string descripcion)
+        {
+            txtCodigoBarras.Text = codigoHerramienta.ToString();
+            txtNombreHerramienta.Text = nombre;
+            txtMedidaHerramienta.Text = medida.ToString();
+            txtMarcaHerramienta.Text = marca;
+            txtDescripcionHerramienta.Text = descripcion;
         }
     }
 }

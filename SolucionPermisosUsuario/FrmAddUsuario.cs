@@ -68,5 +68,10 @@ namespace SolucionPermisosUsuario
             dtpFechaNac.Value = DateTime.Parse(fechaNacimiento);
             txtRFC.Text = rfc;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
