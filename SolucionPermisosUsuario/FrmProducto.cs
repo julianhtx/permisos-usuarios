@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 using Identities;
 using System;
 ﻿using System;
 ﻿using Controller;
 using Identities;
 using System;
+=======
+<<<<<<< HEAD
+﻿using System;
+=======
+﻿using Controller;
+using Identities;
+using System;
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +23,13 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using Controller;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+=======
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 namespace SolucionPermisosUsuario
 {
     public partial class FrmProducto : Form
@@ -24,11 +39,15 @@ namespace SolucionPermisosUsuario
         public static int codigoBarras;
         public static string nombre, marca, descripcion;
 
+<<<<<<< HEAD
 
         private void dtgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
 
         /*private void dtgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
 
+=======
+        /*private void dtgvProductos_CellEnter(object sender, DataGridViewCellEventArgs e)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
         {
             fila = e.RowIndex; columna = e.ColumnIndex;
             switch (columna)
@@ -52,8 +71,11 @@ namespace SolucionPermisosUsuario
                     }
                     break;
             }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
         }*/
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -111,13 +133,17 @@ namespace SolucionPermisosUsuario
                 // Cambia el color de la fila seleccionada (opcional)
                 row.Selected = true; // Esto selecciona la fila visualmente
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
         }
 
         public FrmProducto()
         {
             InitializeComponent();
             cr = new ControllerRefaccion();
+<<<<<<< HEAD
         }
         private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
         {
@@ -140,6 +166,33 @@ namespace SolucionPermisosUsuario
                 btnDel.Visible = false;
                 //falta lo de las posiciones de botones
             }
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
         }
+<<<<<<< HEAD
+=======
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            cr.Mostrar(dtgvProductos, txtBuscarProducto.Text);
+        }
+
+        private void VerificarPermisos()
+        {
+            if (!IdentitiesPermisos.Producto_Escritura)
+            {
+                btnAdd.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+
+            btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
+
+            if (!IdentitiesPermisos.Producto_Eliminacion)
+            {
+                btnDel.Visible = false;
+                //falta lo de las posiciones de botones
+            }
+        }
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
     }
 }

@@ -80,20 +80,30 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\K4os.Ha
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\System.Numerics.Vectors.xml
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 >>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
 =======
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.dll
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.pdb
+<<<<<<< HEAD
 >>>>>>> feature/forms-system
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.dll.config
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Controller.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\DataAccess.dll
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.dll
 >>>>>>> feature/forms-system
+=======
+C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.dll
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\ConexionChacarron.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\MySql.Data.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Google.Protobuf.dll
@@ -111,9 +121,13 @@ C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\System.Numeric
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\DataAccess.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\DataAccess.dll.config
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.pdb
 >>>>>>> feature/forms-system
+=======
+C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.pdb
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\ConexionChacarron.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\MySql.Data.xml
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Google.Protobuf.pdb
@@ -134,6 +148,7 @@ C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.csp
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.dll
 C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.dll
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.pdb
@@ -143,3 +158,6 @@ C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.pdb
 =======
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 >>>>>>> feature/forms-system
+=======
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)

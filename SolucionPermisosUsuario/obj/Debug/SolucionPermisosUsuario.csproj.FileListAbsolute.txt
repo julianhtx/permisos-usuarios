@@ -106,20 +106,30 @@ C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\System.Numerics.Vectors.xml
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 >>>>>>> 8ccf75db37bc38b307af4021425e5f103f311553
 =======
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.dll
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.pdb
+<<<<<<< HEAD
 >>>>>>> feature/forms-system
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.exe.config
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.exe
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\SolucionPermisosUsuario.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Controller.dll
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Identities.dll
 >>>>>>> feature/forms-system
+=======
+C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Identities.dll
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\DataAccess.dll
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\ConexionChacarron.dll
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\MySql.Data.dll
@@ -138,9 +148,13 @@ C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\S
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Controller.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Controller.dll.config
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Identities.pdb
 >>>>>>> feature/forms-system
+=======
+C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\Identities.pdb
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\DataAccess.pdb
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\DataAccess.dll.config
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\ConexionChacarron.pdb
@@ -173,6 +187,7 @@ C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\S
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\SolucionPermisosUsuario.exe
 C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\obj\Debug\SolucionPermisosUsuario.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.dll
 C:\Users\josem\source\repos\SolucionPermisosUsuario\SolucionPermisosUsuario\bin\Debug\Identities.pdb
@@ -182,3 +197,6 @@ C:\Users\Julián\Downloads\permisos-usuarios\SolucionPermisosUsuario\bin\Debug\I
 =======
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 >>>>>>> feature/forms-system
+=======
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)

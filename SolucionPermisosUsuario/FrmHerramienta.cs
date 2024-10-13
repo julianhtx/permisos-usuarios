@@ -93,6 +93,7 @@ namespace SolucionPermisosUsuario
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
         }
 
+<<<<<<< HEAD
 
         private void VerificarPermisos()
         {
@@ -104,11 +105,19 @@ namespace SolucionPermisosUsuario
         {
             if(!IdentitiesPermisos.Herramientas_Escritura)
 
+=======
+<<<<<<< HEAD
+=======
+        private void VerificarPermisos()
+        {
+            if(!IdentitiesPermisos.Herramientas_Escritura)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             {
                 btnAdd.Visible = false;
                 //falta lo de las posiciones de botones
             }
 
+<<<<<<< HEAD
 
             btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
 
@@ -118,14 +127,23 @@ namespace SolucionPermisosUsuario
 
             if (!IdentitiesPermisos.Herramientas_Eliminacion)
 
+=======
+            btnEditar.Visible = IdentitiesPermisos.Herramientas_Actualizacion;
+
+            if (!IdentitiesPermisos.Herramientas_Eliminacion)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             {
                 btnDel.Visible = false;
                 //falta lo de las posiciones de botones
             }
         }
+<<<<<<< HEAD
 
 
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 
+=======
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
     }
 }

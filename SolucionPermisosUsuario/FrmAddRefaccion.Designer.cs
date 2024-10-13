@@ -43,11 +43,15 @@
             // 
             // txtMarcaProducto
             // 
+<<<<<<< HEAD
 
             this.txtMarcaProducto.Location = new System.Drawing.Point(13, 237);
 
             this.txtMarcaProducto.Location = new System.Drawing.Point(13, 251);
 
+=======
+            this.txtMarcaProducto.Location = new System.Drawing.Point(13, 251);
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.txtMarcaProducto.Name = "txtMarcaProducto";
             this.txtMarcaProducto.Size = new System.Drawing.Size(308, 22);
             this.txtMarcaProducto.TabIndex = 57;
@@ -55,11 +59,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
 
             this.label5.Location = new System.Drawing.Point(10, 209);
 
             this.label5.Location = new System.Drawing.Point(10, 223);
 
+=======
+            this.label5.Location = new System.Drawing.Point(10, 223);
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 56;
@@ -95,11 +103,15 @@
             // 
             // txtNombreProducto
             // 
+<<<<<<< HEAD
 
             this.txtNombreProducto.Location = new System.Drawing.Point(13, 169);
 
             this.txtNombreProducto.Location = new System.Drawing.Point(13, 183);
 
+=======
+            this.txtNombreProducto.Location = new System.Drawing.Point(13, 183);
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(308, 22);
             this.txtNombreProducto.TabIndex = 51;
@@ -116,11 +128,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
 
             this.label2.Location = new System.Drawing.Point(10, 141);
 
             this.label2.Location = new System.Drawing.Point(10, 155);
 
+=======
+            this.label2.Location = new System.Drawing.Point(10, 155);
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 48;
@@ -137,11 +153,15 @@
             // 
             // txtCodigoBarras
             // 
+<<<<<<< HEAD
 
             this.txtCodigoBarras.Location = new System.Drawing.Point(12, 114);
 
             this.txtCodigoBarras.Location = new System.Drawing.Point(13, 114);
 
+=======
+            this.txtCodigoBarras.Location = new System.Drawing.Point(13, 114);
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.txtCodigoBarras.Name = "txtCodigoBarras";
             this.txtCodigoBarras.Size = new System.Drawing.Size(308, 22);
             this.txtCodigoBarras.TabIndex = 59;
@@ -149,6 +169,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
 
             this.label4.Location = new System.Drawing.Point(9, 86);
             this.label4.Name = "label4";
@@ -156,12 +177,17 @@
             this.label4.TabIndex = 58;
             this.label4.Text = "Código de barras";
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.label4.Location = new System.Drawing.Point(10, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 16);
             this.label4.TabIndex = 58;
             this.label4.Text = "Código de Barras";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // 
             // FrmAddRefaccion
             // 

@@ -45,6 +45,7 @@
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
 
             this.dtgvPermisos = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,11 +54,17 @@
 
             this.dtgvPermisos = new System.Windows.Forms.DataGridView();
 
+=======
+<<<<<<< HEAD
+=======
+            this.dtgvPermisos = new System.Windows.Forms.DataGridView();
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.Formulario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lectura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Escritura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Eliminacion = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Actualizar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+<<<<<<< HEAD
 
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).BeginInit();
 
@@ -65,6 +72,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).BeginInit();
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 
+=======
+            this.label8 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).BeginInit();
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -209,11 +221,16 @@
             this.label9.TabIndex = 31;
             this.label9.Text = "Username";
             // 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // dtgvPermisos
             // 
             this.dtgvPermisos.AllowUserToAddRows = false;
@@ -226,16 +243,23 @@
             this.Actualizar});
             this.dtgvPermisos.Location = new System.Drawing.Point(11, 375);
             this.dtgvPermisos.Name = "dtgvPermisos";
+<<<<<<< HEAD
 
 
             this.dtgvPermisos.RowHeadersWidth = 51;
 
+=======
+            this.dtgvPermisos.RowHeadersWidth = 51;
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             this.dtgvPermisos.RowTemplate.Height = 24;
             this.dtgvPermisos.Size = new System.Drawing.Size(1135, 150);
             this.dtgvPermisos.TabIndex = 34;
             // 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // Formulario
             // 
             this.Formulario.Frozen = true;
@@ -286,7 +310,10 @@
             this.Actualizar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Actualizar.Width = 125;
             // 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // label8
             // 
             this.label8.AutoSize = true;
@@ -296,6 +323,7 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "PERMISOS";
             // 
+<<<<<<< HEAD
 
             // Formulario
             // 
@@ -340,6 +368,9 @@
 
 >>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
 
+=======
+>>>>>>> f753cee (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             // FrmAddUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

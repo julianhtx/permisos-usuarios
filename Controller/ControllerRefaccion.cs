@@ -14,6 +14,7 @@ namespace Controller
         Funciones f = new Funciones();
         public void Guardar(TextBox codigoBarras, TextBox nombre, TextBox descripcion, TextBox marca)
         {
+<<<<<<< HEAD
 
             MessageBox.Show(f.Guardar($"insert into Refacciones (codigoHerramienta, nombre, medida, marca, descripcion) values ({codigoBarras.Text}, '{nombre.Text}', '{descripcion.Text}', '{marca.Text}')"),
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -26,6 +27,8 @@ namespace Controller
             {
                 f.Borrar($"delete from Refacciones where codigoHerramienta ={ID}");
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             MessageBox.Show(f.Guardar($"insert into Refacciones (CodigoBarras, nombre, marca, descripcion) values ({codigoBarras.Text}, '{nombre.Text}', '{descripcion.Text}', '{marca.Text}')"),
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -36,17 +39,24 @@ namespace Controller
             if (rs == DialogResult.Yes)
             {
                 f.Borrar($"delete from Refacciones where CodigoBarras ={ID}");
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
                 MessageBox.Show("Registro eliminado con exito", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void Modificar(TextBox codigoBarras, TextBox nombre, TextBox descripcion, TextBox marca)
         {
+<<<<<<< HEAD
 
             MessageBox.Show(f.Modificar($"update Taller set nombre = '{nombre.Text}', descripcion = '{descripcion.Text}', marca = '{marca.Text}'where CodigoBarras = {codigoBarras.Text}"),
 
             MessageBox.Show(f.Modificar($"update Refacciones set nombre = '{nombre.Text}', descripcion = '{descripcion.Text}', marca = '{marca.Text}' where CodigoBarras = {codigoBarras.Text}"),
 
+=======
+            MessageBox.Show(f.Modificar($"update Refacciones set nombre = '{nombre.Text}', descripcion = '{descripcion.Text}', marca = '{marca.Text}' where CodigoBarras = {codigoBarras.Text}"),
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -65,6 +75,7 @@ namespace Controller
         {
             tabla.Columns.Clear();
             tabla.DataSource = f.Mostrar($"select * from Refacciones where nombre like '%{filtro}%'", "Refacciones").Tables[0];
+<<<<<<< HEAD
 
             tabla.Columns.Insert(4, Boton("Borrar", Color.Red));
             tabla.Columns.Insert(5, Boton("Editar", Color.Green));
@@ -72,6 +83,10 @@ namespace Controller
             /*tabla.Columns.Insert(4, Boton("Borrar", Color.Red));
             tabla.Columns.Insert(5, Boton("Editar", Color.Green));*/
 
+=======
+            /*tabla.Columns.Insert(4, Boton("Borrar", Color.Red));
+            tabla.Columns.Insert(5, Boton("Editar", Color.Green));*/
+>>>>>>> fb581d2 (LOS FORMULARIOS YA FUNCIONANgit checkout main!)
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }
