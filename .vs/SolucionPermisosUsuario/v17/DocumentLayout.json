@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\controller\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|solutionrelative:controller\\controllerlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\controller\\controlleruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{021752DA-6622-41A1-8229-2F4B123D5EE7}|Controller\\Controller.csproj|solutionrelative:controller\\controlleruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{104F53EE-877E-47FB-B79E-7FFC708087D2}|Identities\\Identities.csproj|C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\identities\\identitiespermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{104F53EE-877E-47FB-B79E-7FFC708087D2}|Identities\\Identities.csproj|solutionrelative:identities\\identitiespermisos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\solucionpermisosusuario\\frmaddusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmaddusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\solucionpermisosusuario\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\solucionpermisosusuario\\frmaddusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmaddusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|c:\\users\\josem\\source\\repos\\solucionpermisosusuario\\solucionpermisosusuario\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C68BA4D-8135-4714-89AC-8F6A5F0E0DEA}|SolucionPermisosUsuario\\SolucionPermisosUsuario.csproj|solutionrelative:solucionpermisosusuario\\frmusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IdentitiesPermisos.cs",
-              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Identities\\IdentitiesPermisos.cs",
-              "RelativeDocumentMoniker": "Identities\\IdentitiesPermisos.cs",
-              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Identities\\IdentitiesPermisos.cs",
-              "RelativeToolTip": "Identities\\IdentitiesPermisos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FrmUsuarios.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmUsuarios.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SolucionPermisosUsuario\\FrmUsuarios.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T19:32:27.293Z",
+              "WhenOpened": "2024-10-13T02:27:25.853Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmAddUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "RelativeToolTip": "SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAUwDgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T02:14:20.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControllerLogin.cs",
-              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerLogin.cs",
-              "RelativeDocumentMoniker": "Controller\\ControllerLogin.cs",
-              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerLogin.cs",
-              "RelativeToolTip": "Controller\\ControllerLogin.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmAddUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmAddUsuario.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmAddUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SolucionPermisosUsuario\\FrmAddUsuario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T19:00:53.727Z",
+              "WhenOpened": "2024-10-13T02:14:18.339Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControllerUser.cs",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerUser.cs",
+              "RelativeDocumentMoniker": "Controller\\ControllerUser.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\Controller\\ControllerUser.cs",
+              "RelativeToolTip": "Controller\\ControllerUser.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwEUAAADSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T01:54:04.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "RelativeDocumentMoniker": "SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "ToolTip": "C:\\Users\\josem\\source\\repos\\SolucionPermisosUsuario\\SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "RelativeToolTip": "SolucionPermisosUsuario\\FrmUsuarios.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T01:52:10.442Z",
               "EditorCaption": ""
             }
           ]
