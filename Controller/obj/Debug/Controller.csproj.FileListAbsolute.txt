@@ -81,3 +81,5 @@ C:\Users\Julián\Downloads\permisos-usuarios\Controller\obj\Debug\Controller.pdb
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.dll
 C:\Users\josem\source\repos\SolucionPermisosUsuario\Controller\bin\Debug\Identities.pdb
 >>>>>>> 51b404c0e1b3999db42fe4d784c8f6fe279dbc32
+C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.dll
+C:\Users\Julián\Downloads\permisos-usuarios\Controller\bin\Debug\Identities.pdb
