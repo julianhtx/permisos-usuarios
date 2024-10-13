@@ -43,6 +43,7 @@
             this.dtgvProductos.RowTemplate.Height = 24;
             this.dtgvProductos.Size = new System.Drawing.Size(887, 413);
             this.dtgvProductos.TabIndex = 21;
+            this.dtgvProductos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvProductos_CellEnter);
             // 
             // txtBuscarProducto
             // 
@@ -50,6 +51,7 @@
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.Size = new System.Drawing.Size(888, 22);
             this.txtBuscarProducto.TabIndex = 20;
+            this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
             // 
             // label1
             // 

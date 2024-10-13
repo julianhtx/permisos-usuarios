@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ControllerHerramienta.cs" />
     <Compile Include="ControllerLogin.cs" />
+    <Compile Include="ControllerRefaccion.cs" />
     <Compile Include="ControllerUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

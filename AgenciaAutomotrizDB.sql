@@ -29,19 +29,24 @@ CREATE TABLE Taller(
     descripcion VARCHAR(255)
 );
 
-CREATE TABLE Permisos(
-    fk_Username varchar(255),
-    nombre_form varchar(255),
-    permisos varchar(255),
-    FOREIGN KEY(fk_Username) REFERENCES Usuarios(Username)
+CREATE TABLE Permisos (
+    fk_Username VARCHAR(255),
+    NombreFormulario VARCHAR(255),
+    FrmLectura BIT,
+    FrmEscritura BIT,
+    FrmActualizacion BIT,
+    FrmEliminacion BIT,
+    FOREIGN KEY (fk_Username) REFERENCES Usuarios(Username)
 );
+
+drop table Permisos;
 
 ALTER TABLE permisos
 MODIFY COLUMN permiso VARCHAR(255);
 
 --* CRUD DE USUARIOS
 --! CREAR E INSERTAR
-DROP PROCEDURE IF EXISTS p_InsertarUsuarios;
+DROP PROCEDURE IF EXISTS p_insertar_usuarios
 CREATE procedure p_insertar_usuarios
 (
     in _username varchar(255),
@@ -50,18 +55,14 @@ CREATE procedure p_insertar_usuarios
     in _apellidoP varchar(255), 
     in _apellidoM varchar(255),
     in _fecha_Nacimiento DATE,
-    in _rfc varchar(20),
-    in _nombre_form varchar(255),
-    in _permisos varchar(255)
+    in _rfc varchar(20)
 )
 begin 
-    declare nuevo_usuario varchar(255); 
-    insert into usuarios (username, password, nombre, apellidop, apellidom, fecha_nacimiento, rfc) values 
-    (_username, _password, _nombre, _apellidop, _apellidom, _fecha_nacimiento, _rfc);
-    set nuevo_usuario = _username; 
-    insert into permisos(fk_username, nombre_form, permisos) values 
-    (nuevo_usuario, _nombre_form, _permisos); 
-end;
+    insert into usuarios (username, password, nombre, apellidop, apellidom, fechanacimiento, rfc) values 
+    (_username, _password, _nombre, _apellidop, _apellidom, _fecha_Nacimiento, _rfc); 
+end;        
+
+describe permisos;
 
 --! MODIFICAR
 DROP PROCEDURE IF EXISTS p_ModificarUsuarios;
@@ -90,7 +91,7 @@ END;
 --! ELIMINAR
 DROP PROCEDURE IF EXISTS p_EliminarUsuarios;
 CREATE PROCEDURE p_EliminarUsuarios(
-    IN _username INT
+    IN _username varchar(255)
 )
 BEGIN
     DELETE FROM Usuarios
@@ -189,66 +190,119 @@ END;
 
 --* CRUD DE PERMISOS
 --! CREAR E INSERTAR
-
-
---! ARREGLAR SI O SI
-
-DROP PROCEDURE IF EXISTS p_InsertarPermisos;
-CREATE PROCEDURE p_InsertarPermisos(
-    IN _fk_username VARCHAR(255),
-    IN _nombre_form VARCHAR(255),
-    IN _permiso VARCHAR(255)
+DROP PROCEDURE IF EXISTS p_insertar_permisos;
+CREATE PROCEDURE p_insertar_permisos(
+    IN _fk_Username VARCHAR(255),
+    IN _NombreFormulario VARCHAR(255),
+    IN _FrmLectura BIT,
+    IN _FrmEscritura BIT,
+    IN _FrmActualizacion BIT,
+    IN _FrmEliminacion BIT
 )
 BEGIN
-    INSERT INTO Permisos (fk_idUsuario, permiso) VALUES (
-        _fk_idUsuario, _permiso
-    );
+    INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion)
+    VALUES (_fk_Username, _NombreFormulario, _FrmLectura, _FrmEscritura, _FrmActualizacion, _FrmEliminacion);
 END;
+
 DESCRIBE PERMISOS
---! LEER DATO (INSERT)
-DROP PROCEDURE IF EXISTS p_ObtenerPermisos;
-CREATE PROCEDURE p_ObtenerPermisos(
-    IN _fk_idUsuario INT
-)
-BEGIN
-    SELECT * FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
-END;
-
---! MODIFICAR
-DROP PROCEDURE IF EXISTS p_ActualizarPermisos;
-CREATE PROCEDURE p_ActualizarPermisos(
-    IN _fk_idUsuario INT,
-    IN _permiso VARCHAR(255)
-)
-BEGIN
-    UPDATE Permisos SET
-        permiso = _permiso
-    WHERE fk_idUsuario = _fk_idUsuario;
-END;
 
 --! BORRAR
-DROP PROCEDURE IF EXISTS p_BorrarPermisos;
-CREATE PROCEDURE p_BorrarPermisos(
-    IN _fk_idUsuario INT
+DROP PROCEDURE IF EXISTS p_eliminar_permisos;
+CREATE PROCEDURE p_eliminar_permisos(
+    IN p_Username VARCHAR(255)
 )
 BEGIN
-    DELETE FROM Permisos WHERE fk_idUsuario = _fk_idUsuario;
+    DELETE FROM Permisos
+    WHERE fk_Username = p_Username;
 END;
 
 /*creacion procedure de validar usuario*/
-DROP procedure if exists p_validar; 
-create procedure p_validar
-(
-	in _user INT,
-	in _pass varchar(255)
+DROP PROCEDURE IF EXISTS p_validar; 
+CREATE PROCEDURE p_validar(
+    IN _user VARCHAR(255),
+    IN _pass VARCHAR(255)
 )
-begin 
+BEGIN 
+    DECLARE x INT;
 
-	DECLARE x INT;
-	SELECT COUNT(*) FROM usuarios WHERE idUsuarios = _user AND password = _pass INTO x;
-	if x > 0 then
-		SELECT 'Correcto' AS rs, (SELECT permiso FROM Permisos WHERE fk_idUsuario = _user) AS Permisos;
-	ELSE
-		SELECT 'Error' AS rs, "" AS Nivel;
-	END if;
+    -- Contar si el usuario y la contraseña son correctos
+    SELECT COUNT(*) INTO x 
+    FROM Usuarios 
+    WHERE Username = _user AND Password = _pass;
+
+    -- Si hay un usuario válido
+    IF x > 0 THEN
+        SELECT 'Correcto' AS rs,
+            p.fk_Username AS Username,
+            p.NombreFormulario,
+            p.FrmLectura,
+            p.FrmEscritura,
+            p.FrmActualizacion,
+            p.FrmEliminacion
+        FROM 
+            Permisos p
+        WHERE 
+            p.fk_Username = _user;
+    ELSE
+        SELECT 'Error' AS rs;
+    END IF;
 END;
+
+describe usuarios;
+describe permisos;
+select * from permisos;
+select * from usuarios;
+
+CREATE VIEW VistaUsuarioPermisos AS
+SELECT 
+    u.Username,
+    u.password,
+    u.nombre,
+    u.apellidoP,
+    u.apellidoM,
+    u.fechanacimiento,
+    u.rfc,
+    p.NombreFormulario,
+    p.FrmLectura,
+    p.FrmEscritura,
+    p.FrmActualizacion,
+    p.FrmEliminacion
+FROM 
+    Usuarios u
+LEFT JOIN 
+    Permisos p ON u.Username = p.fk_Username;
+
+
+insert into usuarios values ('Pepin', sha1('1234'), 'xXPepin', 'Gameplais', 'Xx', '2004-12-15', 'vetm04ert');
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepin', 'Usuarios', 1, 1, 1, 1);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepin', 'Productos', 1, 1, 1, 1);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepin', 'Herramientas', 1, 1, 1, 1);
+
+insert into usuarios values ('Pepinillo', sha1('1234'), 'xXPepinillo', 'Games', 'Xx', '2004-12-15', 'vetm04');
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinillo', 'Usuarios', 1, 1, 0, 1);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinillo', 'Productos', 1, 1, 0, 1);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinillo', 'Herramientas', 1, 1, 0, 1);
+
+insert into usuarios values ('Pepinilla', sha1('1234'), 'xXPepinilla', 'Game', 'Xx', '2004-12-15', 'vetm');
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinilla', 'Usuarios', 0, 0, 0, 0);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinilla', 'Productos', 1, 0, 0, 0);
+INSERT INTO Permisos (fk_Username, NombreFormulario, FrmLectura, FrmEscritura, FrmActualizacion, FrmEliminacion) 
+VALUES ('Pepinilla', 'Herramientas', 1, 0, 0, 0);
+
+call p_validar('Pepin', sha1('1234'));
+
+call p_insertar_usuarios('kiubo', sha1('1234'), 'LG', 'U', 'E', '2004-10-15', 'LGUE');
+
+
+
+CALL p_insertar_permisos('username', 'nombreFormulario', 1, 0, 1, 0);
+delete from usuarios where username = "Joaquin";
+select * from VistaUsuarioPermisos;
